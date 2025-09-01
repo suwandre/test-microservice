@@ -1,0 +1,16 @@
+{
+  "inputPath": "./app",
+  "outputPath": "./docs/swagger.json",
+  "apiInfo": {
+    "title": "Test Microservice API",
+    "version": "1.0.0",
+    "description": "Test API matching company file structure",
+    "baseUrl": "localhost:3000"
+  },
+  "include": [
+    "controller.js",
+    "router.js",
+    "validator.js",
+    "authenticator.js"
+  ]
+}

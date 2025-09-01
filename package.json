@@ -1,0 +1,8 @@
+{
+  "name": "test-microservice",
+  "version": "1.0.0",
+  "scripts": {
+    "docs:generate": "swagger-gen -c swagger-config.json",
+    "docs:validate": "swagger-cli validate docs/swagger.json"
+  }
+}

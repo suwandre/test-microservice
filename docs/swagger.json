@@ -1,0 +1,452 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Test Microservice API",
+    "version": "1.0.0",
+    "description": "Test API matching company file structure"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/app/users": {
+      "get": {
+        "summary": "Get Users",
+        "description": "Get Users",
+        "tags": [
+          "app"
+        ],
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "req parameter"
+          },
+          {
+            "name": "res",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "res parameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/app/{id}": {
+      "get": {
+        "summary": "Get Order By Id",
+        "description": "Get Order By Id",
+        "tags": [
+          "app"
+        ],
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "req parameter"
+          },
+          {
+            "name": "res",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "res parameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/app/create-user": {
+      "post": {
+        "summary": "Create User",
+        "description": "Create User",
+        "tags": [
+          "app"
+        ],
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "req parameter"
+          },
+          {
+            "name": "res",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "res parameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/app/update-user": {
+      "put": {
+        "summary": "Update User",
+        "description": "Update User",
+        "tags": [
+          "app"
+        ],
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "req parameter"
+          },
+          {
+            "name": "res",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "res parameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/app/user": {
+      "delete": {
+        "summary": "Delete User",
+        "description": "Delete User",
+        "tags": [
+          "app"
+        ],
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "req parameter"
+          },
+          {
+            "name": "res",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "res parameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/app/orders": {
+      "get": {
+        "summary": "Get Orders",
+        "description": "Get Orders",
+        "tags": [
+          "app"
+        ],
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "req parameter"
+          },
+          {
+            "name": "res",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "res parameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/app/create-order": {
+      "post": {
+        "summary": "Create Order",
+        "description": "Create Order",
+        "tags": [
+          "app"
+        ],
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "req parameter"
+          },
+          {
+            "name": "res",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "res parameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/app/cancel-order": {
+      "get": {
+        "summary": "Cancel Order",
+        "description": "Cancel Order",
+        "tags": [
+          "app"
+        ],
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "req parameter"
+          },
+          {
+            "name": "res",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "res parameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/app/create-invoice": {
+      "post": {
+        "summary": "Create Invoice",
+        "description": "Create Invoice",
+        "tags": [
+          "app"
+        ],
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "req parameter"
+          },
+          {
+            "name": "res",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "res parameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/app/invoice-status": {
+      "get": {
+        "summary": "Get Invoice Status",
+        "description": "Get Invoice Status",
+        "tags": [
+          "app"
+        ],
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "req parameter"
+          },
+          {
+            "name": "res",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "res parameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/app/handle-webhook": {
+      "get": {
+        "summary": "Handle Webhook",
+        "description": "Handle Webhook",
+        "tags": [
+          "app"
+        ],
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "req parameter"
+          },
+          {
+            "name": "res",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "res parameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {}
+}
