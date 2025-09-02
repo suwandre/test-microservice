@@ -19,17 +19,7 @@ paths:
       description: Get Users
       tags:
         - app
-      parameters:
-        - name: req
-          in: query
-          required: true
-          type: string
-          description: req parameter
-        - name: res
-          in: query
-          required: true
-          type: string
-          description: res parameter
+      parameters: []
       responses:
         '200':
           description: Success
@@ -45,17 +35,7 @@ paths:
       description: Get Order By Id
       tags:
         - app
-      parameters:
-        - name: req
-          in: query
-          required: true
-          type: string
-          description: req parameter
-        - name: res
-          in: query
-          required: true
-          type: string
-          description: res parameter
+      parameters: []
       responses:
         '200':
           description: Success
@@ -72,16 +52,21 @@ paths:
       tags:
         - app
       parameters:
-        - name: req
-          in: query
+        - name: name
+          in: body
           required: true
           type: string
-          description: req parameter
-        - name: res
-          in: query
+          description: name field in request body
+        - name: email
+          in: body
           required: true
           type: string
-          description: res parameter
+          description: email field in request body
+        - name: role
+          in: body
+          required: false
+          type: string
+          description: role field in request body
       responses:
         '200':
           description: Success
@@ -97,17 +82,7 @@ paths:
       description: Update User
       tags:
         - app
-      parameters:
-        - name: req
-          in: query
-          required: true
-          type: string
-          description: req parameter
-        - name: res
-          in: query
-          required: true
-          type: string
-          description: res parameter
+      parameters: []
       responses:
         '200':
           description: Success
@@ -123,17 +98,7 @@ paths:
       description: Delete User
       tags:
         - app
-      parameters:
-        - name: req
-          in: query
-          required: true
-          type: string
-          description: req parameter
-        - name: res
-          in: query
-          required: true
-          type: string
-          description: res parameter
+      parameters: []
       responses:
         '200':
           description: Success
@@ -149,17 +114,7 @@ paths:
       description: Get Orders
       tags:
         - app
-      parameters:
-        - name: req
-          in: query
-          required: true
-          type: string
-          description: req parameter
-        - name: res
-          in: query
-          required: true
-          type: string
-          description: res parameter
+      parameters: []
       responses:
         '200':
           description: Success
@@ -176,16 +131,21 @@ paths:
       tags:
         - app
       parameters:
-        - name: req
-          in: query
+        - name: userId
+          in: body
           required: true
           type: string
-          description: req parameter
-        - name: res
-          in: query
+          description: userId field in request body
+        - name: items
+          in: body
           required: true
           type: string
-          description: res parameter
+          description: items field in request body
+        - name: total
+          in: body
+          required: true
+          type: string
+          description: total field in request body
       responses:
         '200':
           description: Success
@@ -202,16 +162,11 @@ paths:
       tags:
         - app
       parameters:
-        - name: req
-          in: query
+        - name: reason
+          in: body
           required: true
           type: string
-          description: req parameter
-        - name: res
-          in: query
-          required: true
-          type: string
-          description: res parameter
+          description: reason field in request body
       responses:
         '200':
           description: Success
@@ -228,16 +183,21 @@ paths:
       tags:
         - app
       parameters:
-        - name: req
-          in: query
+        - name: amount
+          in: body
           required: true
           type: string
-          description: req parameter
-        - name: res
-          in: query
+          description: amount field in request body
+        - name: currency
+          in: body
           required: true
           type: string
-          description: res parameter
+          description: currency field in request body
+        - name: orderId
+          in: body
+          required: true
+          type: string
+          description: orderId field in request body
       responses:
         '200':
           description: Success
@@ -253,17 +213,7 @@ paths:
       description: Get Invoice Status
       tags:
         - app
-      parameters:
-        - name: req
-          in: query
-          required: true
-          type: string
-          description: req parameter
-        - name: res
-          in: query
-          required: true
-          type: string
-          description: res parameter
+      parameters: []
       responses:
         '200':
           description: Success
@@ -279,17 +229,7 @@ paths:
       description: Handle Webhook
       tags:
         - app
-      parameters:
-        - name: req
-          in: query
-          required: true
-          type: string
-          description: req parameter
-        - name: res
-          in: query
-          required: true
-          type: string
-          description: res parameter
+      parameters: []
       responses:
         '200':
           description: Success

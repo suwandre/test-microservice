@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "docs:generate": "swagger-gen -c swagger-config.json",
-    "docs:validate": "swagger-cli validate docs/swagger.json"
+    "docs:serve": "node swagger-server.js",
+    "docs:build-and-serve": "npm run docs:generate && npm run docs:serve"
+  },
+  "dependencies": {
+    "swagger-ui-express": "^5.0.1"
   }
 }

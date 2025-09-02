@@ -25,22 +25,7 @@
         "tags": [
           "app"
         ],
-        "parameters": [
-          {
-            "name": "req",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "req parameter"
-          },
-          {
-            "name": "res",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "res parameter"
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "Success",
@@ -64,22 +49,7 @@
         "tags": [
           "app"
         ],
-        "parameters": [
-          {
-            "name": "req",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "req parameter"
-          },
-          {
-            "name": "res",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "res parameter"
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "Success",
@@ -105,18 +75,25 @@
         ],
         "parameters": [
           {
-            "name": "req",
-            "in": "query",
+            "name": "name",
+            "in": "body",
             "required": true,
             "type": "string",
-            "description": "req parameter"
+            "description": "name field in request body"
           },
           {
-            "name": "res",
-            "in": "query",
+            "name": "email",
+            "in": "body",
             "required": true,
             "type": "string",
-            "description": "res parameter"
+            "description": "email field in request body"
+          },
+          {
+            "name": "role",
+            "in": "body",
+            "required": false,
+            "type": "string",
+            "description": "role field in request body"
           }
         ],
         "responses": {
@@ -142,22 +119,7 @@
         "tags": [
           "app"
         ],
-        "parameters": [
-          {
-            "name": "req",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "req parameter"
-          },
-          {
-            "name": "res",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "res parameter"
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "Success",
@@ -181,22 +143,7 @@
         "tags": [
           "app"
         ],
-        "parameters": [
-          {
-            "name": "req",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "req parameter"
-          },
-          {
-            "name": "res",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "res parameter"
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "Success",
@@ -220,22 +167,7 @@
         "tags": [
           "app"
         ],
-        "parameters": [
-          {
-            "name": "req",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "req parameter"
-          },
-          {
-            "name": "res",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "res parameter"
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "Success",
@@ -261,18 +193,25 @@
         ],
         "parameters": [
           {
-            "name": "req",
-            "in": "query",
+            "name": "userId",
+            "in": "body",
             "required": true,
             "type": "string",
-            "description": "req parameter"
+            "description": "userId field in request body"
           },
           {
-            "name": "res",
-            "in": "query",
+            "name": "items",
+            "in": "body",
             "required": true,
             "type": "string",
-            "description": "res parameter"
+            "description": "items field in request body"
+          },
+          {
+            "name": "total",
+            "in": "body",
+            "required": true,
+            "type": "string",
+            "description": "total field in request body"
           }
         ],
         "responses": {
@@ -300,18 +239,11 @@
         ],
         "parameters": [
           {
-            "name": "req",
-            "in": "query",
+            "name": "reason",
+            "in": "body",
             "required": true,
             "type": "string",
-            "description": "req parameter"
-          },
-          {
-            "name": "res",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "res parameter"
+            "description": "reason field in request body"
           }
         ],
         "responses": {
@@ -339,18 +271,25 @@
         ],
         "parameters": [
           {
-            "name": "req",
-            "in": "query",
+            "name": "amount",
+            "in": "body",
             "required": true,
             "type": "string",
-            "description": "req parameter"
+            "description": "amount field in request body"
           },
           {
-            "name": "res",
-            "in": "query",
+            "name": "currency",
+            "in": "body",
             "required": true,
             "type": "string",
-            "description": "res parameter"
+            "description": "currency field in request body"
+          },
+          {
+            "name": "orderId",
+            "in": "body",
+            "required": true,
+            "type": "string",
+            "description": "orderId field in request body"
           }
         ],
         "responses": {
@@ -376,22 +315,7 @@
         "tags": [
           "app"
         ],
-        "parameters": [
-          {
-            "name": "req",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "req parameter"
-          },
-          {
-            "name": "res",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "res parameter"
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "Success",
@@ -415,22 +339,7 @@
         "tags": [
           "app"
         ],
-        "parameters": [
-          {
-            "name": "req",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "req parameter"
-          },
-          {
-            "name": "res",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "res parameter"
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "Success",
