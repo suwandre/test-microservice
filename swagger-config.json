@@ -5,7 +5,7 @@
     "title": "Test Microservice API",
     "version": "1.0.0",
     "description": "Test API matching company file structure",
-    "baseUrl": "localhost:3000"
+    "baseUrl": "localhost:3000/api"
   },
   "include": [
     "controller.js",

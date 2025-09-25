@@ -4,7 +4,9 @@
   "scripts": {
     "docs:generate": "swagger-gen -c swagger-config.json",
     "docs:serve": "node swagger-server.js",
-    "docs:build-and-serve": "npm run docs:generate && npm run docs:serve"
+    "api:start": "node app.js",
+    "dev": "npm run api:start",
+    "docs:full": "npm run docs:generate && npm run docs:serve"
   },
   "dependencies": {
     "swagger-ui-express": "^5.0.1"

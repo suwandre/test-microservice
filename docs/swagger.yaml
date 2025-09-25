@@ -3,7 +3,7 @@ info:
   title: Test Microservice API
   version: 1.0.0
   description: Test API matching company file structure
-host: localhost:3000
+host: localhost:3000/api
 basePath: /
 schemes:
   - http
@@ -13,13 +13,23 @@ consumes:
 produces:
   - application/json
 paths:
-  /app/users:
+  /users:
     get:
       summary: Get Users
       description: Get Users
       tags:
         - app
-      parameters: []
+      parameters:
+        - name: page
+          in: query
+          required: false
+          type: string
+          description: page query parameter
+        - name: limit
+          in: query
+          required: false
+          type: string
+          description: limit query parameter
       responses:
         '200':
           description: Success
@@ -29,44 +39,31 @@ paths:
           description: Bad Request
         '500':
           description: Internal Server Error
-  /app/{id}:
-    get:
-      summary: Get Order By Id
-      description: Get Order By Id
-      tags:
-        - app
-      parameters: []
-      responses:
-        '200':
-          description: Success
-          schema:
-            type: object
-        '400':
-          description: Bad Request
-        '500':
-          description: Internal Server Error
-  /app/create-user:
     post:
       summary: Create User
       description: Create User
       tags:
         - app
       parameters:
-        - name: name
+        - name: body
           in: body
           required: true
-          type: string
-          description: name field in request body
-        - name: email
-          in: body
-          required: true
-          type: string
-          description: email field in request body
-        - name: role
-          in: body
-          required: false
-          type: string
-          description: role field in request body
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                description: name field
+              email:
+                type: string
+                description: email field
+              role:
+                type: string
+                description: role field
+            required:
+              - name
+              - email
+          description: Request body
       responses:
         '200':
           description: Success
@@ -76,13 +73,44 @@ paths:
           description: Bad Request
         '500':
           description: Internal Server Error
-  /app/update-user:
+  /users/:id:
+    get:
+      summary: Get User By Id
+      description: Get User By Id
+      tags:
+        - app
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+          description: id path parameter
+      responses:
+        '200':
+          description: Success
+          schema:
+            type: object
+        '400':
+          description: Bad Request
+        '500':
+          description: Internal Server Error
     put:
       summary: Update User
       description: Update User
       tags:
         - app
-      parameters: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+          description: id path parameter
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+          description: Request body
       responses:
         '200':
           description: Success
@@ -98,7 +126,12 @@ paths:
       description: Delete User
       tags:
         - app
-      parameters: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+          description: id path parameter
       responses:
         '200':
           description: Success
@@ -108,13 +141,23 @@ paths:
           description: Bad Request
         '500':
           description: Internal Server Error
-  /app/orders:
+  /orders:
     get:
       summary: Get Orders
       description: Get Orders
       tags:
         - app
-      parameters: []
+      parameters:
+        - name: userId
+          in: query
+          required: true
+          type: string
+          description: userId query parameter
+        - name: status
+          in: query
+          required: true
+          type: string
+          description: status query parameter
       responses:
         '200':
           description: Success
@@ -124,28 +167,32 @@ paths:
           description: Bad Request
         '500':
           description: Internal Server Error
-  /app/create-order:
     post:
       summary: Create Order
       description: Create Order
       tags:
         - app
       parameters:
-        - name: userId
+        - name: body
           in: body
           required: true
-          type: string
-          description: userId field in request body
-        - name: items
-          in: body
-          required: true
-          type: string
-          description: items field in request body
-        - name: total
-          in: body
-          required: true
-          type: string
-          description: total field in request body
+          schema:
+            type: object
+            properties:
+              userId:
+                type: string
+                description: userId field
+              items:
+                type: string
+                description: items field
+              total:
+                type: string
+                description: total field
+            required:
+              - userId
+              - items
+              - total
+          description: Request body
       responses:
         '200':
           description: Success
@@ -155,18 +202,38 @@ paths:
           description: Bad Request
         '500':
           description: Internal Server Error
-  /app/cancel-order:
+  /orders/:id:
     get:
+      summary: Get Order By Id
+      description: Get Order By Id
+      tags:
+        - app
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+          description: id path parameter
+      responses:
+        '200':
+          description: Success
+          schema:
+            type: object
+        '400':
+          description: Bad Request
+        '500':
+          description: Internal Server Error
+    delete:
       summary: Cancel Order
       description: Cancel Order
       tags:
         - app
       parameters:
-        - name: reason
-          in: body
+        - name: id
+          in: path
           required: true
           type: string
-          description: reason field in request body
+          description: id path parameter
       responses:
         '200':
           description: Success
@@ -176,28 +243,33 @@ paths:
           description: Bad Request
         '500':
           description: Internal Server Error
-  /app/create-invoice:
+  /invoice:
     post:
       summary: Create Invoice
       description: Create Invoice
       tags:
         - app
       parameters:
-        - name: amount
+        - name: body
           in: body
           required: true
-          type: string
-          description: amount field in request body
-        - name: currency
-          in: body
-          required: true
-          type: string
-          description: currency field in request body
-        - name: orderId
-          in: body
-          required: true
-          type: string
-          description: orderId field in request body
+          schema:
+            type: object
+            properties:
+              amount:
+                type: string
+                description: amount field
+              currency:
+                type: string
+                description: currency field
+              orderId:
+                type: string
+                description: orderId field
+            required:
+              - amount
+              - currency
+              - orderId
+          description: Request body
       responses:
         '200':
           description: Success
@@ -207,13 +279,18 @@ paths:
           description: Bad Request
         '500':
           description: Internal Server Error
-  /app/invoice-status:
+  /invoice/:invoiceId:
     get:
       summary: Get Invoice Status
       description: Get Invoice Status
       tags:
         - app
-      parameters: []
+      parameters:
+        - name: invoiceId
+          in: path
+          required: true
+          type: string
+          description: invoiceId path parameter
       responses:
         '200':
           description: Success
@@ -223,8 +300,8 @@ paths:
           description: Bad Request
         '500':
           description: Internal Server Error
-  /app/handle-webhook:
-    get:
+  /webhook/btcpay:
+    post:
       summary: Handle Webhook
       description: Handle Webhook
       tags:
